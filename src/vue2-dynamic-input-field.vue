@@ -148,9 +148,9 @@ export default /*#__PURE__*/ {
 };
 </script>
 <template>
-  <div class="form-group" style="padding: 50px">
+  <div class="form-group">
     <label v-if="label" for="user_name">{{ label }}</label>
-    <span v-if="label && !optional" class="text-danger">*</span>
+    <span v-if="!optional" class="text-danger">*</span>
     <input
       id="input"
       :type="inputType"
@@ -186,8 +186,6 @@ export default /*#__PURE__*/ {
   </div>
 </template>
 <style scoped>
-@import url("./css/main.css");
-
 .password-eye {
   position: absolute;
   top: 38px;
